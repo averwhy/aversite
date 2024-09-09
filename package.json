@@ -12,13 +12,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.53.1",
     "aversite": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-planet": "^1.0.1-ie11",
     "vite-biome-tailwind-template": "file:"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@tanstack/router-devtools": "^1.56.2",
+    "@tanstack/router-plugin": "^1.56.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
