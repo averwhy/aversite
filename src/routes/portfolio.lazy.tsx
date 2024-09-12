@@ -5,5 +5,9 @@ export const Route = createLazyFileRoute('/portfolio')({
 })
 
 function Portfolio() {
-  return <div className="p-2">Hello from Portfolio!</div>
+  return (
+    <div className="p-2 text-white">
+      Hello from Portfolio!
+    </div>
+  )
 }

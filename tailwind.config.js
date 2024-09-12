@@ -6,7 +6,7 @@ export default {
     "./src/routes/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+
   },
   plugins: [],
 }

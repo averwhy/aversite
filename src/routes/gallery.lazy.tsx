@@ -5,5 +5,9 @@ export const Route = createLazyFileRoute('/gallery')({
 })
 
 function Gallery() {
-  return <div className="p-2">Hello from Gallery!</div>
+  return (
+    <div className="p-2 text-white">
+      Hello from Gallery!
+    </div>
+  )
 }
