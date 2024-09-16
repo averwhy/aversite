@@ -18,6 +18,7 @@ import { Route as rootRoute } from './routes/__root'
 
 const PortfolioLazyImport = createFileRoute('/portfolio')()
 const GalleryLazyImport = createFileRoute('/gallery')()
+const AdminpanelLazyImport = createFileRoute('/adminpanel')()
 const AboutLazyImport = createFileRoute('/about')()
 const IndexLazyImport = createFileRoute('/')()
 
@@ -32,6 +33,11 @@ const GalleryLazyRoute = GalleryLazyImport.update({
   path: '/gallery',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/gallery.lazy').then((d) => d.Route))
+
+const AdminpanelLazyRoute = AdminpanelLazyImport.update({
+  path: '/adminpanel',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/adminpanel.lazy').then((d) => d.Route))
 
 const AboutLazyRoute = AboutLazyImport.update({
   path: '/about',
@@ -61,6 +67,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutLazyImport
       parentRoute: typeof rootRoute
     }
+    '/adminpanel': {
+      id: '/adminpanel'
+      path: '/adminpanel'
+      fullPath: '/adminpanel'
+      preLoaderRoute: typeof AdminpanelLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
@@ -83,6 +96,7 @@ declare module '@tanstack/react-router' {
 interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
+  '/adminpanel': typeof AdminpanelLazyRoute
   '/gallery': typeof GalleryLazyRoute
   '/portfolio': typeof PortfolioLazyRoute
 }
@@ -90,6 +104,7 @@ interface FileRoutesByFullPath {
 interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
+  '/adminpanel': typeof AdminpanelLazyRoute
   '/gallery': typeof GalleryLazyRoute
   '/portfolio': typeof PortfolioLazyRoute
 }
@@ -97,22 +112,24 @@ interface FileRoutesByTo {
 interface FileRoutesById {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
+  '/adminpanel': typeof AdminpanelLazyRoute
   '/gallery': typeof GalleryLazyRoute
   '/portfolio': typeof PortfolioLazyRoute
 }
 
 interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/gallery' | '/portfolio'
+  fullPaths: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/gallery' | '/portfolio'
-  id: '/' | '/about' | '/gallery' | '/portfolio'
+  to: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
+  id: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
   fileRoutesById: FileRoutesById
 }
 
 interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   AboutLazyRoute: typeof AboutLazyRoute
+  AdminpanelLazyRoute: typeof AdminpanelLazyRoute
   GalleryLazyRoute: typeof GalleryLazyRoute
   PortfolioLazyRoute: typeof PortfolioLazyRoute
 }
@@ -120,6 +137,7 @@ interface RootRouteChildren {
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   AboutLazyRoute: AboutLazyRoute,
+  AdminpanelLazyRoute: AdminpanelLazyRoute,
   GalleryLazyRoute: GalleryLazyRoute,
   PortfolioLazyRoute: PortfolioLazyRoute,
 }
@@ -138,6 +156,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
+        "/adminpanel",
         "/gallery",
         "/portfolio"
       ]
@@ -147,6 +166,9 @@ export const routeTree = rootRoute
     },
     "/about": {
       "filePath": "about.lazy.tsx"
+    },
+    "/adminpanel": {
+      "filePath": "adminpanel.lazy.tsx"
     },
     "/gallery": {
       "filePath": "gallery.lazy.tsx"
