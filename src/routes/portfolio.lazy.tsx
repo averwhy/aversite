@@ -6,8 +6,19 @@ export const Route = createLazyFileRoute('/portfolio')({
 
 function Portfolio() {
   return (
-    <div className="p-2 text-white">
-      Hello from Portfolio!
+    <div className='h-screen p-10 items-center justify-center'>
+      a
     </div>
   )
 }
+
+/*
+<Grid container rowSpacing={10} columnSpacing={{ xs: 5, sm: 10, md: 20 }}>
+          <Grid size={3}>
+            <Item>1</Item>
+          </Grid>
+          <Grid size={3}>
+            <Item>2</Item>
+          </Grid>
+        </Grid>
+*/

@@ -93,7 +93,7 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-interface FileRoutesByFullPath {
+export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
   '/adminpanel': typeof AdminpanelLazyRoute
@@ -101,7 +101,7 @@ interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioLazyRoute
 }
 
-interface FileRoutesByTo {
+export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
   '/adminpanel': typeof AdminpanelLazyRoute
@@ -109,7 +109,8 @@ interface FileRoutesByTo {
   '/portfolio': typeof PortfolioLazyRoute
 }
 
-interface FileRoutesById {
+export interface FileRoutesById {
+  __root__: typeof rootRoute
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
   '/adminpanel': typeof AdminpanelLazyRoute
@@ -117,16 +118,16 @@ interface FileRoutesById {
   '/portfolio': typeof PortfolioLazyRoute
 }
 
-interface FileRouteTypes {
+export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
-  id: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
+  id: '__root__' | '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
   fileRoutesById: FileRoutesById
 }
 
-interface RootRouteChildren {
+export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   AboutLazyRoute: typeof AboutLazyRoute
   AdminpanelLazyRoute: typeof AdminpanelLazyRoute
