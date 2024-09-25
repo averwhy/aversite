@@ -12,10 +12,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@geist-ui/core": "^2.3.8",
     "@tanstack/create-router": "^1.58.4",
     "@tanstack/react-router": "^1.58.3",
+    "aversite": "file:",
     "imgix": "^0.0.2",
+    "primereact": "^10.8.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-imgix": "^9.8.2"

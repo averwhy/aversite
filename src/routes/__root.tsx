@@ -1,6 +1,5 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
-import { GeistProvider, CssBaseline } from '@geist-ui/core';
+import { PrimeReactProvider } from 'primereact/api'
 
 export const Route = createRootRoute({
   component: () => (
@@ -19,14 +18,15 @@ export const Route = createRootRoute({
           about
         </Link>{'   '}
         <Link to="/adminpanel" className="text-slate-800 ml-24">
-          a
+          '
         </Link>
       </div>
       <hr className="border-t-1 border-slate-700"/>
       <div className="bg-slate-800 bg-cover font-mono">
-        <Outlet />
-      </div>
-      <TanStackRouterDevtools />
+        <PrimeReactProvider>
+          <Outlet />
+        </PrimeReactProvider>
+        </div>
     </>
   ),
 })
