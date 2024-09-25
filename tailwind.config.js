@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'blurple': '#7289da',
+        'new-blurple': '#5865F2'
+      },
 			animation: {
 				fade: 'fadeIn .7s ease-in-out',
 			},
