@@ -1,5 +1,6 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { GeistProvider, CssBaseline } from '@geist-ui/core';
 
 export const Route = createRootRoute({
   component: () => (
@@ -17,7 +18,7 @@ export const Route = createRootRoute({
         <Link to="/about" className="[&.active]:font-bold">
           about
         </Link>{'   '}
-        <Link to="/adminpanel" className="text-slate-800 [&.active]:font-bold">
+        <Link to="/adminpanel" className="text-slate-800 ml-24">
           a
         </Link>
       </div>

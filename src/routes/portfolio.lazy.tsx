@@ -6,8 +6,8 @@ export const Route = createLazyFileRoute('/portfolio')({
 
 function Portfolio() {
   return (
-    <div className='h-screen p-10 items-center justify-center'>
-      a
+    <div className='h-screen p-32 items-center justify-center'>
+      hi
     </div>
   )
 }

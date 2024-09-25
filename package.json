@@ -12,15 +12,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@geist-ui/core": "^2.3.8",
     "@tanstack/create-router": "^1.58.4",
     "@tanstack/react-router": "^1.58.3",
-    "baseui": "^0.0.0-next-18f01efe0",
     "imgix": "^0.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-imgix": "^9.8.2",
-    "styletron-engine-monolithic": "^1.0.0",
-    "styletron-react": "^6.1.1"
+    "react-imgix": "^9.8.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",

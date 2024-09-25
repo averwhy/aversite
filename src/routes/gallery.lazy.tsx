@@ -17,7 +17,7 @@ function lotsOfPics(){
 
 function Gallery() {
   return (
-    <div className="p-2 text-white h-screen">
+    <div className="p-2 text-white">
           {lotsOfPics()}
     </div>
   )
