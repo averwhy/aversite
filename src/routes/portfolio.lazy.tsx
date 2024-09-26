@@ -1,5 +1,4 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
-import { isSupported } from 'firebase/messaging/sw'
 import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 
@@ -40,7 +39,7 @@ const ecoCardTitle = ( <>EconomyX <span className="pi pi-discord"></span></> )
 
 function Portfolio() {
   return (
-    <div className='p-16 animate-fade'>
+    <div className='p-16 animate-fade h-screen'>
       <Card header={ecoxHeader} title={ecoCardTitle} subTitle="python, discord.py, postgreSQL" footer={ecoxFooter} pt={ecoCardPT} className='bg-slate-700 text-white font-mono font-bold md:w-96 sm:w-56'>
         <p className="font-normal">
             EconomyX is a unique & simple economy game bot for Discord. This project began in 2020, starting out with just a few commands and a lightweight
