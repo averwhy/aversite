@@ -35,7 +35,7 @@ const ecoxFooter = (
   </>
 )
 
-const ecoCardTitle = ( <>EconomyX <span className="pi pi-discord"></span></> )
+const ecoCardTitle = ( <>EconomyX <span className="pi pi-discord" /></> )
 
 function Portfolio() {
   return (
