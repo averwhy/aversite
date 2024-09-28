@@ -39,12 +39,12 @@ const ecoCardTitle = ( <>EconomyX <span className="pi pi-discord" /></> )
 
 function Portfolio() {
   return (
-    <div className='p-16 animate-fade h-screen'>
-      <Card header={ecoxHeader} title={ecoCardTitle} subTitle="python, discord.py, postgreSQL" footer={ecoxFooter} pt={ecoCardPT} className='bg-slate-700 text-white font-mono font-bold md:w-96 sm:w-56'>
+    <div className="h-screen animate-fade p-16">
+      <Card header={ecoxHeader} title={ecoCardTitle} subTitle="python, discord.py, postgreSQL" footer={ecoxFooter} pt={ecoCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
         <p className="font-normal">
             EconomyX is a unique & simple economy game bot for Discord. This project began in 2020, starting out with just a few commands and a lightweight
             SQLite database.
-            Today, it's come to have 6+ gambling commands <span className="italic text-slate-300 text-xs">(remember it's a virtual currency!)</span>,
+            Today, it's come to have 6+ gambling commands <span className="text-slate-300 text-xs italic">(remember it's a virtual currency!)</span>,
             a stocks system, lottery, jobs system, and a treasure digging sim coming soon.
         </p>
         <p>
