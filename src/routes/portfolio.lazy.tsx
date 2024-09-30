@@ -21,36 +21,61 @@ const ecoxHeader = (
   <img alt='EconomyX banner' src="./src/assets/ecox-banner.png"/>
 )
 
-function sourceClick(){ window.open(ecoxGithubURL) }
-function inviteClick(){ window.open(ecoxInviteURL) }
-function tryitClick(){ window.open(ecoxSupportURL) }
+const fpyHeader = (
+  <img alt='Fishy.py banner' src="./src/assets/fishypy banner.png" height={220} width={518}/>
+)
+
+function ecoSC(){ window.open(ecoxGithubURL) }
+function ecoIC(){ window.open(ecoxInviteURL) }
+function ecoTIC(){ window.open(ecoxSupportURL) }
 
 const ecoxFooter = (
   <>
-    <Button label="Source" icon="pi pi-github" link onClick={sourceClick} className='bg-slate-900 p-3 hover:bg-slate-950'/>
+    <Button label="Source" icon="pi pi-github" link onClick={ecoSC} className='bg-slate-900 p-3 hover:bg-slate-950'/>
     {" "}
-    <Button label="Invite" icon="pi pi-discord" link onClick={inviteClick} className='bg-blurple p-3 hover:bg-new-blurple'/>
+    <Button label="Invite" icon="pi pi-discord" link onClick={ecoIC} className='bg-blurple p-3 hover:bg-new-blurple'/>
     {" "}
-    <Button label="Try it" icon="pi pi-comments" link onClick={tryitClick} className='bg-slate-800 p-3 hover:bg-slate-900'/>
+    <Button label="Try it" icon="pi pi-comments" link onClick={ecoTIC} className='bg-slate-800 p-3 hover:bg-slate-900'/>
   </>
 )
 
 const ecoCardTitle = ( <>EconomyX <span className="pi pi-discord" /></> )
+const fishCardTitle = ( <>fishy.py <span className="pi pi-discord" /></> )
 
 function Portfolio() {
   return (
     <div className="h-screen animate-fade p-16">
-      <Card header={ecoxHeader} title={ecoCardTitle} subTitle="python, discord.py, postgreSQL" footer={ecoxFooter} pt={ecoCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
-        <p className="font-normal">
-            EconomyX is a unique & simple economy game bot for Discord. This project began in 2020, starting out with just a few commands and a lightweight
-            SQLite database.
-            Today, it's come to have 6+ gambling commands <span className="text-slate-300 text-xs italic">(remember it's a virtual currency!)</span>,
-            a stocks system, lottery, jobs system, and a treasure digging sim coming soon.
-        </p>
-        <p>
-          EconomyX is in 855+ servers, with 1,080+ players.
-        </p>
-      </Card>
+      <div className="grid grid-cols-2 place-items-center gap-6 lg:grid-cols-3 lg:gap-3">
+        <Card header={fpyHeader} title={fishCardTitle} subTitle="python, discord.py, sqlite" footer={ecoxFooter} pt={ecoCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
+          <p className="font-normal text-sm xs:text-xs">
+              Fishy.py is recreation of a old Discord bot, which was a reaction-based fishing game with over 16,000 catchable fish.
+              This was my first major bot project that taught me a lot about Python, SQLite and common coding practices.
+              Fishy.py is in 320+ servers, and while not as successful as some of my other projects, it was still a project i throughly enjoyed making.
+          </p>
+        </Card>
+        <Card header={ecoxHeader} title={ecoCardTitle} subTitle="python, discord.py, postgreSQL" footer={ecoxFooter} pt={ecoCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
+          <p className="font-normal">
+              EconomyX is a unique & simple economy game bot for Discord. This project began in 2020, starting out with just a few commands and a lightweight
+              SQLite database.
+              Today, it's come to have 6+ gambling commands <span className="text-slate-300 text-xs italic">(remember it's a virtual currency!)</span>,
+              a stocks system, lottery, jobs system, and a treasure digging sim coming soon.
+          </p>
+          <p>
+            EconomyX is in 855+ servers, with 1,080+ players.
+          </p>
+        </Card>
+        <Card header={ecoxHeader} title={ecoCardTitle} subTitle="python, discord.py, postgreSQL" footer={ecoxFooter} pt={ecoCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
+          <p className="font-normal">
+              EconomyX is a unique & simple economy game bot for Discord. This project began in 2020, starting out with just a few commands and a lightweight
+              SQLite database.
+              Today, it's come to have 6+ gambling commands <span className="text-slate-300 text-xs italic">(remember it's a virtual currency!)</span>,
+              a stocks system, lottery, jobs system, and a treasure digging sim coming soon.
+          </p>
+          <p>
+            EconomyX is in 855+ servers, with 1,080+ players.
+          </p>
+        </Card>
+      </div>
     </div>
   )
 }
