@@ -18,11 +18,10 @@ const ecoCardPT = {
 }
 
 const ecoxHeader = (
-  <img alt='EconomyX banner' src="./src/assets/ecox-banner.png"/>
+  <img alt='EconomyX banner' src="./../ecox-banner.png"/>
 )
-
 const fpyHeader = (
-  <img alt='Fishy.py banner' src="./src/assets/fishypy banner.png" height={220} width={518}/>
+  <img alt='Fishy.py banner' src="./../fishypy banner.png" height={220} width={518}/>
 )
 
 function ecoSC(){ window.open(ecoxGithubURL) }
@@ -44,8 +43,8 @@ const fishCardTitle = ( <>fishy.py <span className="pi pi-discord" /></> )
 
 function Portfolio() {
   return (
-    <div className="h-screen animate-fade p-16">
-      <div className="grid grid-cols-2 place-items-center gap-6 lg:grid-cols-3 lg:gap-3">
+    <div className="h-screen animate-fade items-center flex justify-center p-16">
+      <div className="grid grid-cols-2 place-items-start gap-3 lg:grid-cols-3 lg:gap-32">
         <Card header={fpyHeader} title={fishCardTitle} subTitle="python, discord.py, sqlite" footer={ecoxFooter} pt={ecoCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
           <p className="font-normal text-sm xs:text-xs">
               Fishy.py is recreation of a old Discord bot, which was a reaction-based fishing game with over 16,000 catchable fish.
