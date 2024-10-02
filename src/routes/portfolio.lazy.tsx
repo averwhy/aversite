@@ -35,6 +35,9 @@ const fpyHeader = (
 const timHeader = (
   <img alt='TimBot banner' src="./../snhuesports.png" height={220} width={518}/>
 )
+const aversiteHeader = (
+  <img alt='aversite logo banner' src="./../avry_banner.png" height={220} width={518}/>
+)
 
 function ecoSC(){ window.open(ecoxGithubURL) }
 function ecoIC(){ window.open(ecoxInviteURL) }
@@ -121,7 +124,7 @@ function Portfolio() {
               a bot for the server, multiple features have been added such as 'reaction' roles, GGCircuit integration, and more.
             </p>
           </Card>
-          <Card header={timHeader} title="This site!" subTitle="react, tailwind css, vite, biome + more" footer={aversiteFooter} pt={basicCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
+          <Card header={aversiteHeader} title="This site!" subTitle="react, tailwind css, vite, biome + more" footer={aversiteFooter} pt={basicCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
             <p className="font-normal text-xs lg:text-sm">
               I hand coded this website that you're reading today! It was much needed and i think it came out looking pretty nice :)
             </p>

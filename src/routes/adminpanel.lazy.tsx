@@ -6,7 +6,7 @@ export const Route = createLazyFileRoute('/adminpanel')({
 
 function Portfolio() {
   return (
-    <div className="p-2 text-white h-screen">
+    <div className="h-screen p-2 text-white">
       Admin panel here lol
     </div>
   )
