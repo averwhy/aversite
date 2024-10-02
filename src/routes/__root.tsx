@@ -31,6 +31,12 @@ const pageBody = (
   </div>
 );
 
+const bottomFooter = (
+  <div className="flex w-full break-after-auto justify-end gap-2 bg-slate-900 p-2 font-mono text-blue-50 text-xs">
+    <span><a href='/'>averwhy.net,</a></span> made with <span className="pi pi-heart-fill" /> (and vite) by avery b
+  </div>
+)
+
 export const Route = createRootRoute({
   component: () => (
     <>
@@ -38,6 +44,8 @@ export const Route = createRootRoute({
         {topMenu}
         {menuBreak}
         {pageBody}
+        {menuBreak}
+        {bottomFooter}
       </PrimeReactProvider>
     </>
   ),
