@@ -15,6 +15,7 @@
     "@tanstack/create-router": "^1.58.4",
     "@tanstack/react-router": "^1.58.3",
     "async-folder-walker": "^3.0.5",
+    "aversite": "file:",
     "primeicons": "^7.0.0",
     "primereact": "^10.8.3",
     "react": "^18.3.1",
