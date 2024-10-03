@@ -1,23 +1,23 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
+//import { asyncFolderWalker } from 'async-folder-walker';
+//import { useEffect, useState } from 'react';
 
 export const Route = createLazyFileRoute('/gallery')({
   component: Gallery,
 })
 
-function lotsOfPics(){
-  var picList = [];
-  for (let i = 0; i < 50; i++){
-    picList.push(
-      <img src="https://scmapdb.wdfiles.com/local--resized-images/wad:developer-textures/dev_256_or_032x.jpg/small.jpg" alt={"Testing pic"}/>
-    )
-  }
-  return picList;
-}
+// const getGalleryPics = async function(): Promise<React.JSX.Element[]>{
+  
+// }
 
 function Gallery() {
+  //const [galleryPics, setGalleryPics] = useState<React.JSX.Element[]>([]);
+
   return (
-    <div className="p-2 text-white">
-          {lotsOfPics()}
+    <div className="flex h-screen justify-center p-2 text-white">
+      <div className="grid grid-cols-3 items-center gap-8 gap-x-96 pt-10">
+          wip
+      </div>
     </div>
   )
 }
