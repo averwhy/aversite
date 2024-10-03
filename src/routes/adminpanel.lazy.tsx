@@ -13,7 +13,6 @@ function Portfolio() {
   const [userIsEmpty, setUserIsEmpty] = useState(false);
   const [pwIsEmpty, setPWIsEmpty] = useState(false);
   const [buttonToggle, setButtonToggle] = useState(false);
-  const [userValue, setUserValue] = useState('')
 
   const userPT = {
     root: { className: "text-black" }
@@ -44,6 +43,24 @@ function Portfolio() {
       console.log("button is enabled");
     }
   }
+
+  function pwOnChange(e: React.ChangeEvent<HTMLInputElement>){
+    if (e.target.value.length === 0){
+      setPWIsEmpty(true);
+    } else {
+      setPWIsEmpty(false);
+    }
+
+    if (userIsEmpty && pwIsEmpty){
+      setButtonToggle(false);
+      console.log("button is disabled");
+    }
+    else if (!userIsEmpty && !pwIsEmpty) {
+      setButtonToggle(true);
+      console.log("button is enabled");
+    }
+  }
+
   return (
     <div className="h-screen p-2 text-white">
       <div className="container mx-auto flex justify-center place-self-center">
@@ -57,7 +74,7 @@ function Portfolio() {
           <InputText onChange={userOnChange} pt={userPT}/>
           <br/>
           <p>password</p>
-          <Password pt={passwordPT}/>
+          <Password onChange={pwOnChange} pt={passwordPT}/>
         </Card>
       </div>
       <div className="flex justify-center p-3">
