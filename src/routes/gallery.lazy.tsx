@@ -1,14 +1,15 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
-//import { asyncFolderWalker } from 'async-folder-walker';
+import { asyncFolderWalker } from 'async-folder-walker';
 //import { useEffect, useState } from 'react';
 
 export const Route = createLazyFileRoute('/gallery')({
   component: Gallery,
 })
 
-// const getGalleryPics = async function(): Promise<React.JSX.Element[]>{
-  
-// }
+const walker = asyncFolderWalker(['.git', 'node_modules'])
+  for await (const file of walker) {
+  console.log(file) // logs the file path!
+}
 
 function Gallery() {
   //const [galleryPics, setGalleryPics] = useState<React.JSX.Element[]>([]);
