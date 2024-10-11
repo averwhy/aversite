@@ -96,7 +96,7 @@ function Portfolio() {
       <p className="pt-5 text-center text-6xl text-white tracking-widest">portfolio</p>
       <p className="pt-2 pb-10 text-center text-gray-400">coding projects, organization work & more</p>
       <div className="flex animate-fade items-center justify-center p-1">
-        <div className="xl:gay-y-5 grid grid-cols-1 place-items-start gap-3 gap-y-5 lg:grid-cols-2 xl:grid-cols-3 xl:gap-32">
+        <div className="grid grid-cols-1 place-items-start gap-3 gap-y-5 lg:grid-cols-2 xl:grid-cols-3 xl:gap-32 xl:gap-y-5">
           <Card header={fpyHeader} title={fishCardTitle} subTitle="python, discord.py, sqlite" footer={fishyFooter} pt={basicCardPT} className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96">
             <p className="font-normal text-xs lg:text-sm">
                 Fishy.py is recreation and revival of the old Discord bot Fishy, which was a reaction-based fishing game with over 16,000 catchable fish.
