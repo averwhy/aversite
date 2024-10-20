@@ -4,7 +4,7 @@
 ![commits](https://img.shields.io/github/commit-activity/w/averwhy/aversite?color=gree&style=flat-square)
 ![stars](https://img.shields.io/github/stars/averwhy/aversite?color=gold&style=flat-square)
 
-# aversite
+# [aversite](https://averwhy.net)
 
 My website. Will contain things like an about me, programming portfolio, photography portfolio, etc.
 
