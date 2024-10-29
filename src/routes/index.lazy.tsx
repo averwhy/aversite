@@ -1,14 +1,14 @@
-import { createLazyFileRoute } from '@tanstack/react-router';
+import { createLazyFileRoute } from "@tanstack/react-router";
 import ParticleImage, {
   type ParticleOptions,
   Vector,
   forces,
-  type ParticleForce
+  type ParticleForce,
 } from "react-particle-image";
 
-export const Route = createLazyFileRoute('/')({
+export const Route = createLazyFileRoute("/")({
   component: Index,
-})
+});
 
 const particleOptions: ParticleOptions = {
   filter: ({ x, y, image }) => {
@@ -19,11 +19,11 @@ const particleOptions: ParticleOptions = {
   },
   color: () => "#61dafb",
   radius: () => Math.random() * 1.5 + 0.5,
-  mass: () => 40,
-  friction: () => 0.15,
+  mass: () => 35,
+  friction: () => 0.1,
   initialPosition: ({ canvasDimensions }) => {
     return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2);
-  }
+  },
 };
 
 const mouseForce = (x: number, y: number): ParticleForce => {
@@ -37,32 +37,35 @@ const clickForce = (x: number, y: number): ParticleForce => {
 function Index() {
   return (
     <>
-      <div className='flex h-screen items-center justify-center'>
+      <div className="flex items-center justify-center">
+        <div className="font-bold text-white pt-4">
+          <span>
+            hey
+            <p className="pb-5 text-center text-gray-400">
+              this site is a work in progress! so far /portfolio has had the
+              most work done on it
+              <br />
+              thanks for visiting :D
+            </p>
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center justify-center h-screen">
         <ParticleImage
           src={"/avry_transparent.png"}
-          scale={2}
+          scale={3}
           creationDuration={1500}
-          entropy={40}
-          maxParticles={4200}
+          entropy={20}
+          maxParticles={2500}
           particleOptions={particleOptions}
           mouseMoveForce={mouseForce}
           touchMoveForce={clickForce}
           mouseDownForce={clickForce}
           backgroundColor="#1e293b"
+          height={700}
+          width={700}
         />
       </div>
-      <div className="flex items-center justify-center">
-        <div className="font-bold text-white">
-          <span>
-          hey
-          <p className='pb-5 text-center text-gray-400'>
-            this site is a work in progress! so far /portfolio has had the most work done on it
-            <br/>
-            thanks for visiting :D
-          </p>
-          </span>
-        </div>
-      </div>
     </>
-  )
+  );
 }
