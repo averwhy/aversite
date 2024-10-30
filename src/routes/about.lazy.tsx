@@ -22,8 +22,8 @@ function About() {
             you could take. They mostly just taught computer competency skills, but enjoyed it nonetheless. In 8th grade, I vividly remember writing Windows Batch scripts for the first time.
             Then came the time to pick my freshman year classes. The first one I added was Programming with John Ranta.
           </p>
-          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="Young toddler sitting on his dad's lap playing Webkinz on an old iMac"/>
-          <p>yet another pic</p>
+          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_2338.jpeg" alt="Young toddler sitting on his dad's lap playing Webkinz on an old iMac"/>
+          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_roboticsvarsityletter.jpg" alt="A teenager holding a certificate that reads 'FIRST Robotics Certification of Participation', while also holding a Varsity Letter. He is also posing with his mom"/>
           <p>
             My first programming class was an intro to Python. We used Notepad++ to edit our programs, and John showed us videos 
             on {<a href="https://py4e.com" rel='noopener noreferrer' className="text-blue-400 hover:text-blue-700">PY4E.</a>} On 
