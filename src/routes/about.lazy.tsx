@@ -1,5 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-
+import ImgThatCanHandleItsOwnErrors from "../utils/ImgWithFallback";
 export const Route = createLazyFileRoute("/about")({
   component: About,
 });
@@ -8,8 +8,8 @@ function About() {
   return (
     <>
       <div className="flex animate-fade items-center justify-center p-1">
-        <div className="grid grid-cols-1 place-items-start gap-3 gap-x-7 gap-y-7 p-5 text-white leading-9 lg:grid-cols-2 lg:p-64">
-          <img src="https://cdn.averwhy.net/IMG_8388.jpg" alt="A young couple smiling at the camera"/>
+        <div className="grid grid-cols-1 place-items-start gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
+          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="A young couple smiling at the camera"/>
           <p>
             My name is Avery. I'm a 20 year old aspiring programmer. I'm from New Hampshire, and I'm currently studying Computer Science at Southern New Hampshire University.
             I'm passionate about all things computers, especially programming, hardware, and open source software. I've worked with Python the most, but have also used Javascript/Typescript, 
@@ -22,13 +22,20 @@ function About() {
             you could take. They mostly just taught computer competency skills, but enjoyed it nonetheless. In 8th grade, I vividly remember writing Windows Batch scripts for the first time.
             Then came the time to pick my freshman year classes. The first one I added was Programming with John Ranta.
           </p>
-          <p>another pic of some kind</p>
+          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="Young toddler sitting on his dad's lap playing Webkinz on an old iMac"/>
           <p>yet another pic</p>
           <p>
             My first programming class was an intro to Python. We used Notepad++ to edit our programs, and John showed us videos 
             on {<a href="https://py4e.com" rel='noopener noreferrer' className="text-blue-400 hover:text-blue-700">PY4E.</a>} On 
-            most of my projects I would go above and beyond because I was curious how I could make my program different. Throughout my years in High School, I took programming classes every year/semester.
-            Some of the things I learned include but aren't limited to: Python & Pygame, some Rust, Javascript, and Java.
+            most of my projects I would go above and beyond because I was curious how I could make my program different. Before I knew it, I found myself joining the Programming Club,
+            along with some others at my school like The Claw (our schools digital magazine).
+          </p>
+          <p>
+            Throughout my years in High School, I took programming classes every year/semester.
+            Some of the things I learned include but aren't limited to: Python & Pygame, some Rust, Javascript, and Java. 
+            I also took on some special projects, such
+            as {<a href="https://github.com/averwhy/treasure-dig-vr?tab=readme-ov-file#treasuredig-vr" rel='noopener noreferrer' className="text-blue-400 hover:text-blue-700">my VR game</a>} that 
+            I developed in the Godot Game engine.
           </p>
         </div>
       </div>
