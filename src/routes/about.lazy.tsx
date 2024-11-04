@@ -8,7 +8,7 @@ function About() {
   return (
     <>
       <div className="flex animate-fade items-center justify-center p-1">
-        <div className="grid grid-cols-1 place-items-start gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
+        <div className="grid grid-cols-1 place-items-start items-center gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
           <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="A young couple smiling at the camera" width={480} height={360}/>
           <p>
             My name is Avery. I'm a 20 year old aspiring programmer. I'm from New Hampshire, and I'm currently studying Computer Science at Southern New Hampshire University.
