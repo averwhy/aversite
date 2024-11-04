@@ -38,7 +38,7 @@ function Index() {
   return (
     <>
       <div className="flex items-center justify-center">
-        <div className="font-bold text-white pt-4">
+        <div className="pt-4 font-bold text-white">
           <span>
             hey
             <p className="pb-5 text-center text-gray-400">
@@ -50,7 +50,7 @@ function Index() {
           </span>
         </div>
       </div>
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex h-screen items-center justify-center">
         <ParticleImage
           src={"/avry_transparent.png"}
           scale={3}

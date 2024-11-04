@@ -9,7 +9,7 @@ function About() {
     <>
       <div className="flex animate-fade items-center justify-center p-1">
         <div className="grid grid-cols-1 place-items-start gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
-          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="A young couple smiling at the camera"/>
+          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="A young couple smiling at the camera" width={480} height={360}/>
           <p>
             My name is Avery. I'm a 20 year old aspiring programmer. I'm from New Hampshire, and I'm currently studying Computer Science at Southern New Hampshire University.
             I'm passionate about all things computers, especially programming, hardware, and open source software. I've worked with Python the most, but have also used Javascript/Typescript, 
@@ -22,7 +22,7 @@ function About() {
             you could take. They mostly just taught computer competency skills, but enjoyed it nonetheless. In 8th grade, I vividly remember writing Windows Batch scripts for the first time.
             Then came the time to pick my freshman year classes. The first one I added was Programming with John Ranta.
           </p>
-          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_2338.jpeg" alt="Young toddler sitting on his dad's lap playing Webkinz on an old iMac"/>
+          <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_2338.jpeg" alt="Young toddler sitting on his dad's lap playing Webkinz on an old iMac" width={270} height={360}/>
           <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_roboticsvarsityletter.jpg" alt="A teenager holding a certificate that reads 'FIRST Robotics Certification of Participation', while also holding a Varsity Letter. He is also posing with his mom"/>
           <p>
             My first programming class was an intro to Python. We used Notepad++ to edit our programs, and John showed us videos 
