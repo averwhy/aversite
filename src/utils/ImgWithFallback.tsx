@@ -9,16 +9,18 @@ const errorMsgPT = {
 interface ImgThatCanHandleItsOwnErrorsProps {
     src: string;
     alt: string;
+    width?: number;
+    height?: number;
 };
   
-const ImgThatCanHandleItsOwnErrors: React.FC<ImgThatCanHandleItsOwnErrorsProps>  = ({src, alt}) => {
+const ImgThatCanHandleItsOwnErrors: React.FC<ImgThatCanHandleItsOwnErrorsProps>  = ({src, alt, width, height}) => {
 const [picError, setPicError] = useState(false);
 function picErrored(){ setPicError(true) };
 return (
     picError ? (
     <Message severity="error" text="picture failed to load. this might be cloudflare's fault" pt={errorMsgPT} className="place-self-center"/>
     ) : (
-    <img src={src} alt={alt} onError={picErrored}/>
+    <img src={src} alt={alt} width={width} height={height} onError={picErrored}/>
     )
 )
 }
