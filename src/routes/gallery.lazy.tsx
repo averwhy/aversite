@@ -28,7 +28,7 @@ function Gallery() {
     <div className="animate-fade justify-center p-4">
       <Toast ref={galleryErrorToast} pt={toastErrorPT}/>
       <p className="pb-4 text-gray-500 text-xs">
-        these are all unedited photos taken by me. © avery bertrand 2024.
+        these are all unedited photos taken by me. © avery b 2024.
       </p>
       <RowsPhotoAlbum photos={photos} componentsProps={{
         image: {
