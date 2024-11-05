@@ -8,7 +8,7 @@ function About() {
   return (
     <>
       <div className="flex animate-fade items-center justify-center p-1">
-        <div className="grid grid-cols-1 place-items-start items-center gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
+        <div className="grid grid-cols-1 place-items-center items-center gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
           <ImgThatCanHandleItsOwnErrors src="https://cdn.averwhy.net/IMG_8388.jpg" alt="A young couple smiling at the camera" width={480} height={360}/>
           <p>
             My name is Avery. I'm a 20 year old aspiring programmer. I'm from New Hampshire, and I'm currently studying Computer Science at Southern New Hampshire University.
@@ -32,10 +32,24 @@ function About() {
           </p>
           <p>
             Throughout my years in High School, I took programming classes every year/semester.
-            Some of the things I learned include but aren't limited to: Python & Pygame, some Rust, Javascript, and Java. 
-            I also took on some special projects, such
-            as {<a href="https://github.com/averwhy/treasure-dig-vr?tab=readme-ov-file#treasuredig-vr" rel='noopener noreferrer' className="text-blue-400 hover:text-blue-700">my VR game</a>} that 
-            I developed in the Godot Game engine.
+            Some of the things I learned include but aren't limited to: Python & Pygame, some Rust, Javascript, and Java. Come Sophomore year, I found myself getting involved in FIRST Robotics.
+            I found my calling there in a team environment- kids my age working towards specific goals in a very collaborative setting. I stayed in FIRST Robotics through covid and 
+            continued competing until I graduated. In order to graduate though, I needed to complete my <span>senior project.</span>
+            For that, I choose to take on a unique project:
+            I made {<a href="https://github.com/averwhy/treasure-dig-vr?tab=readme-ov-file#treasuredig-vr" rel='noopener noreferrer' className="text-blue-400 hover:text-blue-700">a VR game</a>} in 
+            the Godot Game engine using GDScript, a Pythonic-like language.
+          </p>
+          <p>image aaaa</p>
+          <image>another image aaa</image>
+          <p>Come the Covid pandemic, everything stopped. I needed something to keep my hands busy, so I started a new Discord bot project, named EconomyX.
+            I began writing this bot from the ground up
+            using {<a href="https://averwhy.net/portfolio" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-700">discord.py</a>}, all
+            whilst maintaining (and slowly working on) my other bot fishy.py. I share a bit more of the bots specific's details on my portfolio page. That bot today
+            has since amassed over 880 guilds with over a thousand different players. <br/>
+            Fast foward to the end of high school, I eagerly started college which has allowed me to take a handful of more focused classes that have fostered my interests a lot. 
+            So far I've taking classes on Agile/Scrum, databases, mobile app development, operating platforms, and quite a handful of C++ classes. There are many more
+            classes that I'm excited to take, such as software security, operating systems, and many more. I'm always looking to pick up new skills, discover new tools,
+            and learn new languages.
           </p>
         </div>
       </div>
