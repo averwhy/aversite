@@ -21,11 +21,17 @@ const timServerURL = "https://discord.gg/snhuesports";
 
 const aversiteSourceURL = "https://github.com/averwhy/aversite";
 
+const scoutingSourceURL = "https://github.com/averwhy/Scouting2022";
+
+const treasureSourceURL = "https://github.com/averwhy/treasure-dig-vr"
+const treasureDownloadURL = "https://github.com/averwhy/treasure-dig-vr/releases"
+
 const basicCardPT = {
   subTitle: { className: "text-slate-300 font-light text-sm m-0 mb-1" },
-  title: { className: "mb-0" },
+  title: { className: "mb-1" },
   content: { className: "py-1" },
-  footer: { className: "py-2 flex gap-5 place-content-center" },
+  footer: { className: "py-2 px-0 flex gap-3 place-content-center" },
+  root: { className: "m-3 md:m-0" }
 };
 
 const ecoxHeader = <img alt="EconomyX banner" src="./../ecox-banner.png" />;
@@ -49,6 +55,22 @@ const aversiteHeader = (
   <img
     alt="aversite logo banner"
     src="./../avry_banner.png"
+    height={220}
+    width={518}
+  />
+);
+const scoutingHeader = (
+  <img
+    alt="FIRST robotics logo"
+    src="./../scouting.png"
+    height={220}
+    width={518}
+  />
+);
+const treasureHeader = (
+  <img
+    alt="Screenshot of VR game"
+    src=""
     height={220}
     width={518}
   />
@@ -83,6 +105,17 @@ function timTIC() {
 
 function aversiteSC() {
   window.open(aversiteSourceURL);
+}
+
+function scoutingSC() {
+  window.open(scoutingSourceURL);
+}
+
+function treasureSC() {
+  window.open(treasureSourceURL);
+}
+function treasureDL() {
+  window.open(treasureDownloadURL);
 }
 
 const ecoxFooter = (
@@ -155,7 +188,6 @@ const timFooter = (
     />
   </>
 );
-
 const aversiteFooter = (
   <>
     <Button
@@ -163,6 +195,35 @@ const aversiteFooter = (
       icon="pi pi-github"
       link
       onClick={aversiteSC}
+      className="text-pretty bg-slate-900 p-3 hover:bg-slate-950"
+    />
+  </>
+);
+const scoutingFooter = (
+  <>
+    <Button
+      label="Source"
+      icon="pi pi-github"
+      link
+      onClick={scoutingSC}
+      className="text-pretty bg-slate-900 p-3 hover:bg-slate-950"
+    />
+  </>
+);
+const treasureFooter = (
+  <>
+    <Button
+      label="Source"
+      icon="pi pi-github"
+      link
+      onClick={treasureSC}
+      className="text-pretty bg-slate-900 p-3 hover:bg-slate-950"
+    />
+    <Button
+      label="Releases"
+      icon="pi pi-download"
+      link
+      onClick={treasureDL}
       className="text-pretty bg-slate-900 p-3 hover:bg-slate-950"
     />
   </>
@@ -256,6 +317,35 @@ function Portfolio() {
               general program questions if they needed to. However over the time
               it's been a bot for the server, multiple features have been added
               such as 'reaction' roles, GGCircuit integration, and more.
+            </p>
+          </Card>
+          <Card
+            header={treasureHeader}
+            title="TreasureDigVR"
+            subTitle="godot engine, gdscript"
+            footer={treasureFooter}
+            pt={basicCardPT}
+            className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
+          >
+            <p className="font-normal text-xs lg:text-sm">
+              For my high school's senior project, I chose to tackle a new project that I had not tried or learned before.
+              Godot Engine is a free and open source engine that some of my friends had been using for projects. So I came up with
+              TreasureDigVR, a simple game made for the Oculus Quest 2. After researching all aspects of VR, including the games industry,
+              technology and more, I presented this and achieved Senior Project Honors.
+            </p>
+          </Card>
+          <Card
+            header={scoutingHeader}
+            title="Scouting2022 & 2023"
+            subTitle="react, bootstrap, firebase"
+            footer={scoutingFooter}
+            pt={basicCardPT}
+            className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
+          >
+            <p className="font-normal text-xs lg:text-sm">
+              During my time on my high school's FIRST Robotics team, I made a new Scouting website
+              using React that stored scouting data in Firestore, it then compiled that data in a few
+              different views, allowing the team to see vital information by team or match.
             </p>
           </Card>
           <Card
