@@ -131,10 +131,14 @@ function About() {
             So far I've taking classes on Agile/Scrum, databases, mobile app
             development, operating platforms, and quite a handful of C++
             classes. There are many more classes that I'm excited to take, such
-            as software security, operating systems, and many more. I'm always
+            as software security, unit tests, networking, and many more. I'm always
             looking to pick up new skills, discover new tools, and learn new
             languages.
           </p>
+          <ImgThatCanHandleItsOwnErrors
+            src="https://cdn.averwhy.net/bostonaquarium.jpg"
+            alt="Young couple taking a selfie standing in front of the penguin exhibit at the Boston Aquarium"
+          />
         </div>
       </div>
     </>
