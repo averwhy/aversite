@@ -98,8 +98,14 @@ function About() {
             }{" "}
             in the Godot Game engine using GDScript, a Pythonic-like language.
           </p>
-          <p>image aaaa</p>
-          <image>another image aaa</image>
+          <ImgThatCanHandleItsOwnErrors
+            src="https://cdn.averwhy.net/december2019HOC.png"
+            alt="A newspaper photo showing students posing with their teacher"
+          />
+          <ImgThatCanHandleItsOwnErrors
+            src="https://cdn.averwhy.net/meSeta.jpg"
+            alt="A freshman college student standing in front of the School of Engineering, Technology and Aeronautics"
+          />
           <p>
             Come the Covid pandemic, everything stopped. I needed something to
             keep my hands busy, so I started a new Discord bot project, named
@@ -119,12 +125,15 @@ function About() {
             with over a thousand different players. <br />
             Fast foward to the end of high school, I eagerly started college
             which has allowed me to take a handful of more focused classes that
-            have fostered my interests a lot. So far I've taking classes on
-            Agile/Scrum, databases, mobile app development, operating platforms,
-            and quite a handful of C++ classes. There are many more classes that
-            I'm excited to take, such as software security, operating systems,
-            and many more. I'm always looking to pick up new skills, discover
-            new tools, and learn new languages.
+            have fostered my interests a lot.
+          </p>
+          <p>
+            So far I've taking classes on Agile/Scrum, databases, mobile app
+            development, operating platforms, and quite a handful of C++
+            classes. There are many more classes that I'm excited to take, such
+            as software security, operating systems, and many more. I'm always
+            looking to pick up new skills, discover new tools, and learn new
+            languages.
           </p>
         </div>
       </div>
