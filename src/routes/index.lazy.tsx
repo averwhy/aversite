@@ -5,6 +5,34 @@ import ParticleImage, {
   forces,
   type ParticleForce,
 } from "react-particle-image";
+import { Button } from "primereact/button";
+import {
+  FaLastfmSquare,
+  FaGithub,
+  FaSpotify,
+  FaSteam,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaBluesky } from "react-icons/fa6";
+
+function lastfm() {
+  window.open("https://www.last.fm/user/averwhy_");
+}
+function bluesky() {
+  window.open("https://bsky.averwhy.net");
+}
+function github() {
+  window.open("https://github.com/averwhy");
+}
+function spotify() {
+  window.open("https://open.spotify.com/user/averwhy");
+}
+function steam() {
+  window.open("https://steamcommunity.com/id/averwhy/");
+}
+function youtube() {
+  window.open("https://www.youtube.com/@averwhy_");
+}
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -38,16 +66,38 @@ function Index() {
   return (
     <>
       <div className="flex items-center justify-center">
-        <div className="pt-4 font-bold text-white">
+        <div className="mx-2 pt-4 font-bold text-white">
           <span>
-            hey
-            <p className="pb-5 text-center text-gray-400">
-              this site is a work in progress! so far /portfolio has had the
-              most work done on it
+            hey!
+            <p className="mx-2 pb-5 text-center text-gray-400">
+              welcome in, feel free to browse around and learn some stuff about
+              me
               <br />
-              thanks for visiting :D
+              thanks for visiting :{">"}
             </p>
           </span>
+          <div className="flex items-center justify-center">
+            <div className="grid grid-cols-6 items-start gap-4">
+              <Button label="" onClick={bluesky}>
+                <FaBluesky size={60} className="hover:animate-pulse" />
+              </Button>
+              <Button label="" onClick={lastfm}>
+                <FaLastfmSquare size={60} className="hover:animate-pulse" />
+              </Button>
+              <Button label="" onClick={github}>
+                <FaGithub size={60} className="hover:animate-pulse" />
+              </Button>
+              <Button label="" onClick={youtube}>
+                <FaYoutube size={60} className="hover:animate-pulse" />
+              </Button>
+              <Button label="" onClick={spotify}>
+                <FaSpotify size={60} className="hover:animate-pulse" />
+              </Button>
+              <Button label="" onClick={steam}>
+                <FaSteam size={60} className="hover:animate-pulse" />
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex h-screen items-center justify-center">
