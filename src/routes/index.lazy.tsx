@@ -78,22 +78,22 @@ function Index() {
           </span>
           <div className="flex items-center justify-center">
             <div className="grid grid-cols-6 items-start gap-4">
-              <Button label="" onClick={bluesky}>
+              <Button label="" onClick={bluesky} tooltip="Bluesky (The new Twitter)">
                 <FaBluesky size={60} className="hover:animate-pulse" />
               </Button>
-              <Button label="" onClick={lastfm}>
+              <Button label="" onClick={lastfm} tooltip="LastFM">
                 <FaLastfmSquare size={60} className="hover:animate-pulse" />
               </Button>
-              <Button label="" onClick={github}>
+              <Button label="" onClick={github} tooltip="Github">
                 <FaGithub size={60} className="hover:animate-pulse" />
               </Button>
-              <Button label="" onClick={youtube}>
+              <Button label="" onClick={youtube} tooltip="Youtube">
                 <FaYoutube size={60} className="hover:animate-pulse" />
               </Button>
-              <Button label="" onClick={spotify}>
+              <Button label="" onClick={spotify} tooltip="Spotify">
                 <FaSpotify size={60} className="hover:animate-pulse" />
               </Button>
-              <Button label="" onClick={steam}>
+              <Button label="" onClick={steam} tooltip="Steam">
                 <FaSteam size={60} className="hover:animate-pulse" />
               </Button>
             </div>
