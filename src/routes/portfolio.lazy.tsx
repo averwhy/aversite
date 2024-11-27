@@ -22,16 +22,18 @@ const timServerURL = "https://discord.gg/snhuesports";
 const aversiteSourceURL = "https://github.com/averwhy/aversite";
 
 const scoutingSourceURL = "https://github.com/averwhy/Scouting2022";
+const packupSourceURL = "https://github.com/orgs/PackUpApp/repositories";
 
-const treasureSourceURL = "https://github.com/averwhy/treasure-dig-vr"
-const treasureDownloadURL = "https://github.com/averwhy/treasure-dig-vr/releases"
+const treasureSourceURL = "https://github.com/averwhy/treasure-dig-vr";
+const treasureDownloadURL =
+  "https://github.com/averwhy/treasure-dig-vr/releases";
 
 const basicCardPT = {
   subTitle: { className: "text-slate-300 font-light text-sm m-0 mb-1" },
   title: { className: "mb-1" },
   content: { className: "py-1" },
   footer: { className: "py-2 px-0 flex gap-3 place-content-center" },
-  root: { className: "m-3 md:m-0" }
+  root: { className: "m-3 md:m-0" },
 };
 
 const ecoxHeader = <img alt="EconomyX banner" src="./../ecox-banner.png" />;
@@ -59,6 +61,14 @@ const aversiteHeader = (
     width={518}
   />
 );
+const packupHeader = (
+  <img
+    alt="packUP logo"
+    src="https://cdn.averwhy.net/PackUp-Logo.png"
+    height={220}
+    width={518}
+  />
+);
 const scoutingHeader = (
   <img
     alt="FIRST robotics logo"
@@ -70,7 +80,7 @@ const scoutingHeader = (
 const treasureHeader = (
   <img
     alt="Screenshot of VR game"
-    src=""
+    src="https://cdn.averwhy.net/SCR-20241127-cpvh.jpeg"
     height={220}
     width={518}
   />
@@ -109,6 +119,10 @@ function aversiteSC() {
 
 function scoutingSC() {
   window.open(scoutingSourceURL);
+}
+
+function packupSC() {
+  window.open(packupSourceURL);
 }
 
 function treasureSC() {
@@ -210,6 +224,17 @@ const scoutingFooter = (
     />
   </>
 );
+const packupFooter = (
+  <>
+    <Button
+      label="Source"
+      icon="pi pi-github"
+      link
+      onClick={packupSC}
+      className="text-pretty bg-slate-900 p-3 hover:bg-slate-950"
+    />
+  </>
+);
 const treasureFooter = (
   <>
     <Button
@@ -272,7 +297,7 @@ function Portfolio() {
               successful as some of my other projects, it was still a project i
               throughly enjoyed making, as well as learned a lot through.
             </p>
-            <p>Fishy.py is in 320+ servers, with 600+ unique players.</p>
+            <p>Fishy.py is in 325+ servers, with 600+ unique players.</p>
           </Card>
           <Card
             header={ecoxHeader}
@@ -293,7 +318,7 @@ function Portfolio() {
               , a stocks system, lottery, jobs system, and a treasure digging
               sim coming soon.
             </p>
-            <p>EconomyX is in 855+ servers, with 1,080+ players.</p>
+            <p>EconomyX is in 890+ servers, with 1,110+ players.</p>
           </Card>
           <Card
             header={timHeader}
@@ -320,6 +345,21 @@ function Portfolio() {
             </p>
           </Card>
           <Card
+            header={packupHeader}
+            title="packUP"
+            subTitle="react native + expo,  express.js, postgresql"
+            footer={packupFooter}
+            pt={basicCardPT}
+            className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
+          >
+            <p className="font-normal text-xs lg:text-sm">
+              packUP is a simple trip planning app that me and my team of peers
+              in CS-360 (Mobile Application Development) have been working on.
+              While it's still a work in progress, I'm proud of the work thats
+              been put in so far and am excited to see our final product.
+            </p>
+          </Card>
+          <Card
             header={treasureHeader}
             title="TreasureDigVR"
             subTitle="godot engine, gdscript"
@@ -328,10 +368,13 @@ function Portfolio() {
             className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
           >
             <p className="font-normal text-xs lg:text-sm">
-              For my high school's senior project, I chose to tackle a new project that I had not tried or learned before.
-              Godot Engine is a free and open source engine that some of my friends had been using for projects. So I came up with
-              TreasureDigVR, a simple game made for the Oculus Quest 2. After researching all aspects of VR, including the games industry,
-              technology and more, I presented this and achieved Senior Project Honors.
+              For my high school's senior project, I chose to tackle a new
+              project that I had not tried or learned before. Godot Engine is a
+              free and open source engine that some of my friends had been using
+              for projects. So I came up with TreasureDigVR, a simple game made
+              for the Oculus Quest 2. After researching all aspects of VR,
+              including the games industry, technology and more, I presented
+              this and achieved Senior Project Honors.
             </p>
           </Card>
           <Card
@@ -343,9 +386,10 @@ function Portfolio() {
             className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
           >
             <p className="font-normal text-xs lg:text-sm">
-              During my time on my high school's FIRST Robotics team, I made a new Scouting website
-              using React that stored scouting data in Firestore, it then compiled that data in a few
-              different views, allowing the team to see vital information by team or match.
+              During my time on my high school's FIRST Robotics team, I made a
+              new Scouting website using React that stored scouting data in
+              Firestore, it then compiled that data in a few different views,
+              allowing the team to see vital information by team or match.
             </p>
           </Card>
           <Card

@@ -17,8 +17,8 @@ function About() {
           />
           <p>
             My name is Avery. I'm a 20 year old aspiring software developer. I'm
-            from New Hampshire, and I'm currently studying for my BS Computer
-            Science degree at college. I'm passionate about all things
+            from New Hampshire, and I'm currently a full time student studying
+            for my BS Computer Science degree. I'm passionate about all things
             computers, especially programming, hardware, and open source
             software. I've worked with Python the most, but have also used
             Javascript/Typescript, C++, Java, Rust, Lua/

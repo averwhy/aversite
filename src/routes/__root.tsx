@@ -7,6 +7,10 @@ const topMenu = (
       home
     </Link>
     {"   "}
+    <Link to="/about" className="[&.active]:font-bold">
+      about
+    </Link>
+    {"   "}
     <Link to="/portfolio" className="[&.active]:font-bold">
       portfolio
     </Link>
@@ -15,8 +19,8 @@ const topMenu = (
       gallery
     </Link>
     {"   "}
-    <Link to="/about" className="[&.active]:font-bold">
-      about
+    <Link to="/music" className="[&.active]:font-bold">
+      music
     </Link>
     {"   "}
     <Link to="/adminpanel" className="ml-24 text-slate-800">

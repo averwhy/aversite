@@ -17,6 +17,7 @@ import { Route as rootRoute } from './routes/__root'
 // Create Virtual Routes
 
 const PortfolioLazyImport = createFileRoute('/portfolio')()
+const MusicLazyImport = createFileRoute('/music')()
 const GalleryLazyImport = createFileRoute('/gallery')()
 const AdminpanelLazyImport = createFileRoute('/adminpanel')()
 const AboutLazyImport = createFileRoute('/about')()
@@ -28,6 +29,11 @@ const PortfolioLazyRoute = PortfolioLazyImport.update({
   path: '/portfolio',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/portfolio.lazy').then((d) => d.Route))
+
+const MusicLazyRoute = MusicLazyImport.update({
+  path: '/music',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/music.lazy').then((d) => d.Route))
 
 const GalleryLazyRoute = GalleryLazyImport.update({
   path: '/gallery',
@@ -81,6 +87,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryLazyImport
       parentRoute: typeof rootRoute
     }
+    '/music': {
+      id: '/music'
+      path: '/music'
+      fullPath: '/music'
+      preLoaderRoute: typeof MusicLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/portfolio': {
       id: '/portfolio'
       path: '/portfolio'
@@ -98,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutLazyRoute
   '/adminpanel': typeof AdminpanelLazyRoute
   '/gallery': typeof GalleryLazyRoute
+  '/music': typeof MusicLazyRoute
   '/portfolio': typeof PortfolioLazyRoute
 }
 
@@ -106,6 +120,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutLazyRoute
   '/adminpanel': typeof AdminpanelLazyRoute
   '/gallery': typeof GalleryLazyRoute
+  '/music': typeof MusicLazyRoute
   '/portfolio': typeof PortfolioLazyRoute
 }
 
@@ -115,15 +130,29 @@ export interface FileRoutesById {
   '/about': typeof AboutLazyRoute
   '/adminpanel': typeof AdminpanelLazyRoute
   '/gallery': typeof GalleryLazyRoute
+  '/music': typeof MusicLazyRoute
   '/portfolio': typeof PortfolioLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/adminpanel'
+    | '/gallery'
+    | '/music'
+    | '/portfolio'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
-  id: '__root__' | '/' | '/about' | '/adminpanel' | '/gallery' | '/portfolio'
+  to: '/' | '/about' | '/adminpanel' | '/gallery' | '/music' | '/portfolio'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/adminpanel'
+    | '/gallery'
+    | '/music'
+    | '/portfolio'
   fileRoutesById: FileRoutesById
 }
 
@@ -132,6 +161,7 @@ export interface RootRouteChildren {
   AboutLazyRoute: typeof AboutLazyRoute
   AdminpanelLazyRoute: typeof AdminpanelLazyRoute
   GalleryLazyRoute: typeof GalleryLazyRoute
+  MusicLazyRoute: typeof MusicLazyRoute
   PortfolioLazyRoute: typeof PortfolioLazyRoute
 }
 
@@ -140,6 +170,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutLazyRoute: AboutLazyRoute,
   AdminpanelLazyRoute: AdminpanelLazyRoute,
   GalleryLazyRoute: GalleryLazyRoute,
+  MusicLazyRoute: MusicLazyRoute,
   PortfolioLazyRoute: PortfolioLazyRoute,
 }
 
@@ -159,6 +190,7 @@ export const routeTree = rootRoute
         "/about",
         "/adminpanel",
         "/gallery",
+        "/music",
         "/portfolio"
       ]
     },
@@ -173,6 +205,9 @@ export const routeTree = rootRoute
     },
     "/gallery": {
       "filePath": "gallery.lazy.tsx"
+    },
+    "/music": {
+      "filePath": "music.lazy.tsx"
     },
     "/portfolio": {
       "filePath": "portfolio.lazy.tsx"
