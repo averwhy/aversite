@@ -12,6 +12,8 @@ function Music() {
           <ImgThatCanHandleItsOwnErrors
             src="https://cdn.averwhy.net/IMG_8064.png"
             alt="Young adult standing playing electric bass on a black and white Fender Squire Precision Bass"
+            width="270"
+            height="360"
           />
           <p>
             Music has been a huge part of a my life. I always enjoyed listening
