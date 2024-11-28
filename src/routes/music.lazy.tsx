@@ -10,7 +10,7 @@ function Music() {
       <div className="flex h-screen animate-fade items-center justify-center p-1">
         <div className="grid grid-cols-1 place-items-center items-center gap-3 gap-x-7 gap-y-7 p-12 text-white leading-6 lg:grid-cols-2 lg:p-32">
           <ImgThatCanHandleItsOwnErrors
-            src=""
+            src="https://cdn.averwhy.net/IMG_8064.png"
             alt="Young adult standing playing electric bass on a black and white Fender Squire Precision Bass"
           />
           <p>
