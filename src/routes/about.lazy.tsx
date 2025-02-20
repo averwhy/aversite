@@ -16,11 +16,11 @@ function About() {
             height="360"
           />
           <p>
-            My name is Avery. I'm a 20 year old aspiring software developer. I'm
+            My name is Avery. I'm a 21 year old aspiring software developer. I'm
             from New Hampshire, and I'm currently a full time student studying
             for my BS Computer Science degree. I'm passionate about all things
             computers, especially programming, hardware, and open source
-            software. I've worked with Python the most, but have also used
+            software. I've worked with Python the most, but have experience with
             Javascript/Typescript, C++, Java, Rust, Lua/
             {
               <a

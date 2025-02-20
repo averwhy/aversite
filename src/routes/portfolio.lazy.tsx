@@ -28,6 +28,9 @@ const treasureSourceURL = "https://github.com/averwhy/treasure-dig-vr";
 const treasureDownloadURL =
   "https://github.com/averwhy/treasure-dig-vr/releases";
 
+const trackrSourceURL = "https://github.com/averwhy/trackr";
+const trackrInviteURL = "";
+
 const basicCardPT = {
   subTitle: { className: "text-slate-300 font-light text-sm m-0 mb-1" },
   title: { className: "mb-1" },
@@ -85,6 +88,14 @@ const treasureHeader = (
     width={518}
   />
 );
+const trackrheader = (
+  <img
+    alt="Trackr Logo"
+    src="https://cdn.averwhy.net/Designer_TO1qaEwEWn.png"
+    height={220}
+    width={518}
+  />
+);
 
 function ecoSC() {
   window.open(ecoxGithubURL);
@@ -130,6 +141,13 @@ function treasureSC() {
 }
 function treasureDL() {
   window.open(treasureDownloadURL);
+}
+
+function trackrSC() {
+  window.open(trackrSourceURL);
+}
+function trackrIC() {
+  window.open(trackrInviteURL);
 }
 
 const ecoxFooter = (
@@ -253,6 +271,24 @@ const treasureFooter = (
     />
   </>
 );
+const trackrFooter = (
+  <>
+    <Button
+      label="Source"
+      icon="pi pi-github"
+      link
+      onClick={trackrSC}
+      className="text-pretty bg-slate-900 p-3 hover:bg-slate-950"
+    />{" "}
+    <Button
+      label="Invite"
+      icon="pi pi-discord"
+      link
+      onClick={trackrIC}
+      className="text-pretty bg-blurple p-3 hover:bg-new-blurple"
+    />
+  </>
+);
 
 const ecoCardTitle = (
   <>
@@ -267,6 +303,11 @@ const timCardTitle = (
 const fishCardTitle = (
   <>
     fishy.py <span className="pi pi-discord" />
+  </>
+);
+const trackrCardTitle = (
+  <>
+    Trackr <span className="pi pi-discord" />
   </>
 );
 
@@ -319,6 +360,23 @@ function Portfolio() {
               sim coming soon.
             </p>
             <p>EconomyX is in 890+ servers, with 1,110+ players.</p>
+          </Card>
+          <Card
+            header={trackrheader}
+            title={trackrCardTitle}
+            subTitle="rust, postgreSQL"
+            footer={trackrFooter}
+            pt={basicCardPT}
+            className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
+          >
+            <p className="font-normal text-xs lg:text-sm">
+              Trackr is a Discord bot that aims to enable live train tracking from
+              transit agencies such as the NY MTA, MBTA, SEPTA, Amtrak, and more. It's built
+              with Rust using Serenity and Poise, and uses PostgreSQL for data storage. I'm building it without 
+              as hardcoding as much as possible, so it can be easily expanded to other transit agencies.
+              I started this project in January, so it's still a work in progress, but I'm
+              excited to see where it goes.
+            </p>
           </Card>
           <Card
             header={timHeader}
