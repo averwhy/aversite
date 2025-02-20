@@ -412,9 +412,11 @@ function Portfolio() {
           >
             <p className="font-normal text-xs lg:text-sm">
               packUP is a simple trip planning app that me and my team of peers
-              in CS-360 (Mobile Application Development) have been working on.
-              While it's still a work in progress, I'm proud of the work thats
-              been put in so far and am excited to see our final product.
+              in CS-360 (Mobile Application Development) worked on. We used React Native with Expo &
+              GluestackUI, then we built a backend with Express.js and PostgreSQL.
+              The app allows users to create trips, and it will automatically add items
+              to their list based on their answers to a questionaire. Due to the nature of the class,
+              we weren't able to implement everything we wanted to, but it was a great learning experience.
             </p>
           </Card>
           <Card

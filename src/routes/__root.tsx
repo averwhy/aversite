@@ -1,27 +1,18 @@
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
 import { PrimeReactProvider } from "primereact/api";
+import HoverLink from "../utils/HoverLink";
 
 const topMenu = (
   <div className="flex break-after-auto gap-2 bg-slate-800 p-2 font-mono text-blue-50">
-    <Link to="/" className="[&.active]:font-bold">
-      home
-    </Link>
+    <HoverLink to="/" text="home" duration={300} />
     {"   "}
-    <Link to="/about" className="[&.active]:font-bold">
-      about
-    </Link>
+    <HoverLink to="/about" text="about" duration={300} />
     {"   "}
-    <Link to="/portfolio" className="[&.active]:font-bold">
-      portfolio
-    </Link>
+    <HoverLink to="/portfolio" text="portfolio" duration={300} />
     {"   "}
-    <Link to="/gallery" className="[&.active]:font-bold">
-      gallery
-    </Link>
+    <HoverLink to="/gallery" text="gallery" duration={300} />
     {"   "}
-    <Link to="/music" className="[&.active]:font-bold">
-      music
-    </Link>
+    <HoverLink to="/music" text="music" duration={300} />
     {"   "}
     <Link to="/adminpanel" className="ml-24 text-slate-800">
       '
