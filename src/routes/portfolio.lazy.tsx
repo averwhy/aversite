@@ -370,12 +370,13 @@ function Portfolio() {
             className="bg-slate-700 font-bold font-mono text-white sm:w-56 md:w-96"
           >
             <p className="font-normal text-xs lg:text-sm">
-              Trackr is a Discord bot that aims to enable live train tracking from
-              transit agencies such as the NY MTA, MBTA, SEPTA, Amtrak, and more. It's built
-              with Rust using Serenity and Poise, and uses PostgreSQL for data storage. I'm building it without 
-              as hardcoding as much as possible, so it can be easily expanded to other transit agencies.
-              I started this project in January, so it's still a work in progress, but I'm
-              excited to see where it goes.
+              Trackr is a Discord bot that aims to enable live train tracking
+              from transit agencies such as the NY MTA, MBTA, SEPTA, Amtrak, and
+              more. It's built with Rust using Serenity and Poise, and uses
+              PostgreSQL for data storage. I'm building it without as hardcoding
+              as much as possible, so it can be easily expanded to other transit
+              agencies. I started this project in January, so it's still a work
+              in progress, but I'm excited to see where it goes.
             </p>
           </Card>
           <Card
@@ -412,11 +413,13 @@ function Portfolio() {
           >
             <p className="font-normal text-xs lg:text-sm">
               packUP is a simple trip planning app that me and my team of peers
-              in CS-360 (Mobile Application Development) worked on. We used React Native with Expo &
-              GluestackUI, then we built a backend with Express.js and PostgreSQL.
-              The app allows users to create trips, and it will automatically add items
-              to their list based on their answers to a questionaire. Due to the nature of the class,
-              we weren't able to implement everything we wanted to, but it was a great learning experience.
+              in CS-360 (Mobile Application Development) worked on. We used
+              React Native with Expo & GluestackUI, then we built a backend with
+              Express.js and PostgreSQL. The app allows users to create trips,
+              and it will automatically add items to their list based on their
+              answers to a questionaire. Due to the nature of the class, we
+              weren't able to implement everything we wanted to, but it was a
+              great learning experience.
             </p>
           </Card>
           <Card

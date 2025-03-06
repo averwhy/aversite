@@ -1,13 +1,35 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 
-export default function HoverLink({ to, text, duration }: { to: string; text: string; duration: number }) {
+export default function HoverLink({
+  to,
+  text,
+  duration,
+}: { to: string; text: string; duration: number }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <Link
       to={to}
-      className={`[&.active]:font-bold tracking-normal pl-1 transition-all duration-${duration} ease-in-out hover:tracking-widest inline-block`}
-      style={{minWidth: `${text.length * 11.4}px`}}
+      className={`duration-${duration} relative transition-all ease-in-out [&.active]:font-bold`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {text}
+      <div
+        className="inline-block"
+        style={{
+          minWidth: `${text.length * 10.4}px`,
+          textAlign: "center",
+        }}
+      >
+        <span
+          className={`duration-${duration} inline-block transition-all ease-in-out ${
+            isHovered ? "tracking-widest" : "tracking-normal"
+          }`}
+        >
+          {text}
+        </span>
+      </div>
     </Link>
   );
 }

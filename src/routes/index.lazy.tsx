@@ -1,4 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import ParticleImage, {
   type ParticleOptions,
   Vector,
@@ -6,6 +7,7 @@ import ParticleImage, {
   type ParticleForce,
 } from "react-particle-image";
 import { Button } from "primereact/button";
+import { SpeedDial } from "primereact/speeddial";
 import {
   FaLastfmSquare,
   FaGithub,
@@ -14,6 +16,9 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaBluesky } from "react-icons/fa6";
+import "primereact/resources/themes/lara-dark-indigo/theme.css"; // Theme
+import "primereact/resources/primereact.min.css"; // Core CSS
+import "primeicons/primeicons.css"; // Icons
 
 function lastfm() {
   window.open("https://www.last.fm/user/averwhy_");
@@ -62,45 +67,100 @@ const clickForce = (x: number, y: number): ParticleForce => {
   return forces.disturbance(x, y, 35);
 };
 
+const items = [
+  {
+    icon: <FaBluesky size={30} className="hover:animate-pulse" />,
+    command: bluesky,
+    tooltip: "Bluesky (The new Twitter)",
+  },
+  {
+    icon: <FaLastfmSquare size={30} className="hover:animate-pulse" />,
+    command: lastfm,
+    tooltip: "LastFM",
+  },
+  {
+    icon: <FaGithub size={30} className="hover:animate-pulse" />,
+    command: github,
+    tooltip: "Github",
+  },
+  {
+    icon: <FaYoutube size={30} className="hover:animate-pulse" />,
+    command: youtube,
+    tooltip: "Youtube",
+  },
+  {
+    icon: <FaSpotify size={30} className="hover:animate-pulse" />,
+    command: spotify,
+    tooltip: "Spotify",
+  },
+  {
+    icon: <FaSteam size={30} className="hover:animate-pulse" />,
+    command: steam,
+    tooltip: "Steam",
+  },
+];
+
+const basicSpeedDialPT = {
+  action: { className: "bg-slate-800" },
+};
+
 function Index() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 700, height: 700 });
+  
+  // Update dimensions on mount and when window resizes
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.clientWidth;
+        const containerHeight = containerRef.current.clientHeight;
+        
+        // Calculate size while maintaining aspect ratio
+        const maxSize = Math.min(containerWidth, containerHeight, 700);
+        
+        setDimensions({
+          width: maxSize,
+          height: maxSize,
+        });
+      }
+    };
+    
+    // Initial size calculation
+    updateDimensions();
+    
+    // Handle resize events
+    window.addEventListener('resize', updateDimensions);
+    
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+    };
+  }, []);
   return (
     <>
       <div className="flex items-center justify-center">
+        <SpeedDial
+          model={items}
+          direction="left"
+          type="semi-circle"
+          showIcon="pi pi-plus"
+          hideIcon="pi pi-times"
+          buttonClassName="p-button-rounded p-button-outlined bg-slate-700 hover:bg-slate-500"
+          style={{ top: "calc(50%)", right: 10 }}
+          pt={basicSpeedDialPT}
+        />
         <div className="mx-2 pt-4 font-bold text-white">
           <span>
             hey!
             <p className="mx-2 pb-5 text-center text-gray-400">
-              welcome in, feel free to browse around and learn some stuff about
-              me
+              welcome to my website. I'm avery, you can learn more about me <a href="/about" className="text-pretty text-blurple hover:text-new-blurple">here!</a><br/>
+              check out the links above to see my portfolio, photography gallery, blog, and more!<br />
               <br />
               thanks for visiting :{">"}
             </p>
           </span>
-          <div className="flex items-center justify-center">
-            <div className="grid grid-cols-6 items-start gap-4">
-              <Button label="" onClick={bluesky} tooltip="Bluesky (The new Twitter)">
-                <FaBluesky size={60} className="hover:animate-pulse" />
-              </Button>
-              <Button label="" onClick={lastfm} tooltip="LastFM">
-                <FaLastfmSquare size={60} className="hover:animate-pulse" />
-              </Button>
-              <Button label="" onClick={github} tooltip="Github">
-                <FaGithub size={60} className="hover:animate-pulse" />
-              </Button>
-              <Button label="" onClick={youtube} tooltip="Youtube">
-                <FaYoutube size={60} className="hover:animate-pulse" />
-              </Button>
-              <Button label="" onClick={spotify} tooltip="Spotify">
-                <FaSpotify size={60} className="hover:animate-pulse" />
-              </Button>
-              <Button label="" onClick={steam} tooltip="Steam">
-                <FaSteam size={60} className="hover:animate-pulse" />
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
-      <div className="flex h-screen items-center justify-center">
+      <div ref={containerRef} className="flex h-screen items-center justify-center">
         <ParticleImage
           src={"/avry_transparent.png"}
           scale={3}
@@ -112,8 +172,8 @@ function Index() {
           touchMoveForce={clickForce}
           mouseDownForce={clickForce}
           backgroundColor="#1e293b"
-          height={700}
-          width={700}
+          height={dimensions.height}
+          width={dimensions.width}
         />
       </div>
     </>
