@@ -6,7 +6,6 @@ import ParticleImage, {
   forces,
   type ParticleForce,
 } from "react-particle-image";
-import { Button } from "primereact/button";
 import { SpeedDial } from "primereact/speeddial";
 import {
   FaLastfmSquare,
