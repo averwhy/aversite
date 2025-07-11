@@ -58,7 +58,7 @@ const economyx = new Project(
       , a stocks system, lottery, jobs system, and a treasure digging sim coming
       soon.
     </p>
-    <p>EconomyX is in 890+ servers, with 1,110+ players.</p>
+    <p>EconomyX is in 930+ servers, with 1,110+ players.</p>
   </>,
   {
     alt: "EconomyX banner",
