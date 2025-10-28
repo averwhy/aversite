@@ -138,8 +138,8 @@ function About() {
             new languages.
           </p>
           <ImgThatCanHandleItsOwnErrors
-            src="https://cdn.averwhy.net/bostonaquarium.jpg"
-            alt="Young couple taking a selfie standing in front of the penguin exhibit at the Boston Aquarium"
+            src="https://cdn.averwhy.net/IMG_2165.jpeg"
+            alt="Three young students holding a prize check after winning a programming competition"
           />
         </div>
       </div>
