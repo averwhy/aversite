@@ -26,31 +26,31 @@ const photos = [
     alt: "Amtrak Acela 2014 pulling into South Station during the evening"
   },
   {
-    asset: "AVP_8070.JPG",
+    asset: "AVP_8070.jpeg",
     width: 835,
     height: 556,
     alt: "A long exposure (~15s) of a nighttime sky with hints of a solar storm",
   },
   {
-    asset: "AVP_8082.JPG",
+    asset: "AVP_8082.jpeg",
     width: 835,
     height: 556,
     alt: "A long exposure (~15s) of a nighttime sky with hints of a solar storm",
   },
   {
-    asset: "AVP_8090.JPG",
+    asset: "AVP_8090.jpeg",
     width: 835,
     height: 556,
     alt: "A long exposure (~15s) of a nighttime sky with hints of a solar storm",
   },
   {
-    asset: "AVP_8091.JPG",
+    asset: "AVP_8091.jpeg",
     width: 835,
     height: 556,
     alt: "A long exposure (~15s) of a nighttime sky with hints of a solar storm",
   },
   {
-    asset: "AVP_8102.JPG",
+    asset: "AVP_8102.jpeg",
     width: 835,
     height: 556,
     alt: "A long exposure (~15s) of a nighttime sky with hints of a solar storm",
