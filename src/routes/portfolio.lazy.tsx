@@ -32,7 +32,7 @@ const treasureDownloadURL =
 const trackrSourceURL = "https://github.com/averwhy/trackr";
 const trackrSupportURL = "https://discord.gg/kzZJ87WMEQ";
 
-const pride25SourceURL = "https://github.com/averwhy/pride25"
+const penpointSourceURL = "https://github.com/averwhy/penpoint";
 
 const basicCardPT = {
   subTitle: { className: "text-slate-300 font-light text-sm m-0 mb-1" },
@@ -350,17 +350,18 @@ const aversite = new Project(
   true,
 );
 
-const pride25 = new Project(
-  "pride25",
-  "Pride25",
+const penpoint = new Project(
+  "penpoint",
+  "penpoint",
   "pi pi-desktop",
   "vue.js, nuxt",
   <>
     <p className="font-normal text-xs lg:text-sm">
-      Pride25 is a new system for rewarding college students for attending events. I just started this project,
-      but the goal is to have students at my school tap their student ID to a Schlage wireless card reader,
-      then it will grab their student ID from that data and add 3 points. This project is a part of my
-      role as the President of Student Government Organization at my college.
+      Penpoint is an application for rewarding college students for attending
+      events. Built on SvelteKit, students at my school will be able to tap
+      their student ID to a Schlage wireless card reader, and they earn points
+      for attending the event. For more info about Penmen Pride, visit <a href="https://snhusga.org/penmen-pride">here.</a> This project is a part of my role as the
+      President of Student Government Organization at my college.
     </p>
   </>,
   {
@@ -372,17 +373,17 @@ const pride25 = new Project(
   [
     {
       type: "github",
-      url: pride25SourceURL,
+      url: penpointSourceURL,
       label: "Source",
       icon: "pi pi-github",
-    }
+    },
   ],
   true,
   true,
 );
 
 const projects = [
-  pride25,
+  penpoint,
   trackr,
   economyx,
   fishypy,

@@ -10,10 +10,10 @@ function About() {
       <div className="flex animate-fade items-center justify-center p-1">
         <div className="grid grid-cols-1 place-items-center items-center gap-3 gap-x-7 gap-y-7 p-12 text-white leading-9 lg:grid-cols-2 lg:p-32">
           <ImgThatCanHandleItsOwnErrors
-            src="https://cdn.averwhy.net/IMG_2199.jpg"
-            alt="A young man wearing pink glasses smiling at the camera making a peace hand gesture"
-            width="480"
-            height="360"
+            src="https://cdn.averwhy.net/IMG_2199.JPG"
+            alt="A young man (me) wearing pink glasses, smiling at the camera making a peace hand gesture"
+            width="360"
+            height="480"
           />
           <p>
             My name is Avery. I'm a 21 year old aspiring software developer. I'm
