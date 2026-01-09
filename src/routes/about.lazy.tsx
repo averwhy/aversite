@@ -16,7 +16,7 @@ function About() {
             height="480"
           />
           <p>
-            My name is Avery. I'm a 21 year old aspiring software developer. I'm
+            My name is Avery. I'm a 22 year old aspiring software developer. I'm
             from New Hampshire, and I'm currently a full time student studying
             for my BS Computer Science degree. I'm passionate about all things
             computers, especially programming, hardware, and open source
@@ -123,19 +123,16 @@ function About() {
             }
             , all whilst maintaining (and slowly working on) my other bot
             fishy.py. I share a bit more of the bots specific's details on my
-            portfolio page. That bot today has since amassed over 880 guilds
+            portfolio page. That bot today has since amassed over 960 guilds
             with over a thousand different players. <br />
             Fast foward to the end of high school, I eagerly started college
             which has allowed me to take a handful of more focused classes that
             have fostered my interests a lot.
           </p>
           <p>
-            So far I've taking classes on Agile/Scrum, databases, mobile app
-            development, operating platforms, and quite a handful of C++
-            classes. There are many more classes that I'm excited to take, such
-            as software security, unit tests, networking, and many more. I'm
-            always looking to pick up new skills, discover new tools, and learn
-            new languages.
+            As I come close to graduating, I've been excited more than ever to
+            take my skills to the next level and entering the workforce. Additionally, I'm always looking to pick up
+            new skills, discover new tools, and learn new languages.
           </p>
           <ImgThatCanHandleItsOwnErrors
             src="https://cdn.averwhy.net/IMG_2165.jpeg"

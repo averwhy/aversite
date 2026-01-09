@@ -354,7 +354,7 @@ const penpoint = new Project(
   "penpoint",
   "penpoint",
   "pi pi-desktop",
-  "vue.js, nuxt",
+  "svelte/sveltekit, postgresql",
   <>
     <p className="font-normal text-xs lg:text-sm">
       Penpoint is an application for rewarding college students for attending
