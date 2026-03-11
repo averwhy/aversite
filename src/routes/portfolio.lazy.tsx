@@ -149,9 +149,9 @@ const trackr = new Project(
       transit agencies such as the NY MTA, MBTA, SEPTA, Amtrak, and more. It's
       built with Rust using Serenity and Poise, and uses PostgreSQL for data
       storage. I'm building it without as hardcoding as much as possible, so it
-      can be easily expanded to other transit agencies. I started this project
-      in January, so it's still a work in progress, but I'm excited to see where
-      it goes.
+      can be easily expanded to other transit agencies. Unfortanutely due to
+      school I haven't been able to work on this as much as I've wanted, but I
+      plan on coming back to it soon.
     </p>
   </>,
   {
@@ -330,8 +330,8 @@ const aversite = new Project(
   "react, tailwindcss & biome",
   <>
     <p className="font-normal text-xs lg:text-sm">
-      I hand coded this website that you're reading today! It was much needed
-      and i think it came out looking pretty nice :)
+      I made this website that you're reading today! It was much needed and i
+      think it came out looking alright :)
     </p>
   </>,
   {
@@ -363,9 +363,14 @@ const penpoint = new Project(
       events. Built on SvelteKit, students at my school will be able to tap
       their student ID to a Schlage wireless card reader, and they earn points
       for attending the event. For more info about Penmen Pride, visit{" "}
-      <a href="https://snhusga.org/penmen-pride">here.</a> This project is a
-      part of my role as the President of Student Government Organization at my
-      college.
+      <a
+        href="https://snhusga.org/penmen-pride"
+        className="text-blue-400 hover:text-blue-700"
+      >
+        here.
+      </a>{" "}
+      This project is a part of my role as the President of Student Government
+      Organization at my college.
     </p>
   </>,
   {
@@ -392,11 +397,14 @@ const fluxus = new Project(
   "pi pi-apple",
   "swift",
   <>
-    <p>
+    <p className="font-normal text-xs lg:text-sm">
       High-performance MacOS DJ software built for flexibility and control. This
       project is still in the planning phase but I plan to work on this for the
       next few years.{" "}
-      <a href="https://github.com/averwhy/Fluxus/discussions/1#discussion-9520616">
+      <a
+        href="https://github.com/averwhy/Fluxus/discussions/1#discussion-9520616"
+        className="text-blue-400 hover:text-blue-700"
+      >
         Read more about Fluxus here.
       </a>
     </p>
@@ -416,7 +424,7 @@ const fluxus = new Project(
     },
   ],
   true,
-  true
+  true,
 );
 
 const projects = [
