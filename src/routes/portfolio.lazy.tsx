@@ -34,6 +34,8 @@ const trackrSupportURL = "https://discord.gg/kzZJ87WMEQ";
 
 const penpointSourceURL = "https://github.com/averwhy/penpoint";
 
+const fluxusSourceURL = "https://github.com/averwhy/Fluxus";
+
 const basicCardPT = {
   subTitle: { className: "text-slate-300 font-light text-sm m-0 mb-1" },
   title: { className: "mb-1" },
@@ -360,8 +362,10 @@ const penpoint = new Project(
       Penpoint is an application for rewarding college students for attending
       events. Built on SvelteKit, students at my school will be able to tap
       their student ID to a Schlage wireless card reader, and they earn points
-      for attending the event. For more info about Penmen Pride, visit <a href="https://snhusga.org/penmen-pride">here.</a> This project is a part of my role as the
-      President of Student Government Organization at my college.
+      for attending the event. For more info about Penmen Pride, visit{" "}
+      <a href="https://snhusga.org/penmen-pride">here.</a> This project is a
+      part of my role as the President of Student Government Organization at my
+      college.
     </p>
   </>,
   {
@@ -382,7 +386,41 @@ const penpoint = new Project(
   true,
 );
 
+const fluxus = new Project(
+  "fluxus",
+  "Fluxus",
+  "pi pi-apple",
+  "swift",
+  <>
+    <p>
+      High-performance MacOS DJ software built for flexibility and control. This
+      project is still in the planning phase but I plan to work on this for the
+      next few years.{" "}
+      <a href="https://github.com/averwhy/Fluxus/discussions/1#discussion-9520616">
+        Read more about Fluxus here.
+      </a>
+    </p>
+  </>,
+  {
+    alt: "Fluxus Github preview",
+    url: "",
+    height: 220,
+    width: 518,
+  },
+  [
+    {
+      type: "github",
+      url: fluxusSourceURL,
+      label: "Source",
+      icon: "pi pi-github",
+    },
+  ],
+  true,
+  true
+);
+
 const projects = [
+  fluxus,
   penpoint,
   trackr,
   economyx,
