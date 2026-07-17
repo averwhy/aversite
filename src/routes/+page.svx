@@ -1,0 +1,21 @@
+<script lang="ts">
+</script>
+
+## hey!
+welcome to my website.
+
+I'm avery, a software engineer with a love of everything computers. you can learn more about me <a href="/about" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-700">here</a>!
+
+check out the links to the side there to see my [portfolio](/portfolio), [photography gallery](/gallery), [blog](https://blog.averwhy.net), and more!
+
+thanks for visiting =)
+
+### connect with me
+<div class="flex flex-1 gap-2">
+<a href="https://twitter.com/averwhy2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center leading-none"><img class="block" src="linkedin.svg" alt="avery-bertrand" height="27" width="37" /></a>
+<a href="https://www.last.fm/user/averwhy_" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center leading-none"><img class="block" src="lastdotfm.svg" alt="avery-bertrand" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/avery-bertrand" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center leading-none"><img class="block" src="twitter.svg" alt="averwhy2" height="30" width="40" /></a>
+<a href="https://twitch.tv/avrwhy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center leading-none"><img class="block" src="twitch.svg" alt="avrwhy" height="25" width="35" /></a>
+<a href="https://instagram.com/averwhy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center leading-none"><img class="block" src="instagram.svg" alt="averwhy" height="27" width="37" /></a>
+<a href="https://www.youtube.com/@averwhy_" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center leading-none"><img class="block" src="youtube.svg" alt="averwhy_" height="30" width="40" /></a>
+</div>

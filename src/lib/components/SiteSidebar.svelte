@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { page } from "$app/state";
     import CodeIcon from "@lucide/svelte/icons/code";
     import HouseIcon from "@lucide/svelte/icons/house";
     import PersonStanding from "@lucide/svelte/icons/person-standing";
@@ -46,9 +47,26 @@
             target: "_blank",
         },
     ];
+
+    function pageMatchesItem(itemUrl: string, pathname: string) {
+        if (itemUrl.startsWith("http")) {
+            return "";
+        }
+
+        const normalizedUrl = itemUrl.startsWith("/") ? itemUrl : `/${itemUrl}`;
+
+        if (normalizedUrl === "/") {
+            return pathname === "/" ? "bg-background" : "";
+        }
+
+        return pathname === normalizedUrl ||
+            pathname.startsWith(`${normalizedUrl}/`)
+            ? "bg-background"
+            : "";
+    }
 </script>
 
-<Sidebar.Root variant="sidebar">
+<Sidebar.Root variant="sidebar" collapsible="icon">
     <Sidebar.Content>
         <Sidebar.Group>
             <!-- <Sidebar.GroupLabel>Application</Sidebar.GroupLabel> -->
@@ -56,9 +74,18 @@
                 <Sidebar.Menu>
                     {#each items as item (item.title)}
                         <Sidebar.MenuItem>
-                            <Sidebar.MenuButton>
+                            <Sidebar.MenuButton
+                                class={pageMatchesItem(
+                                    item.url,
+                                    page.url.pathname,
+                                )}
+                            >
                                 {#snippet child({ props })}
-                                    <a href={item.url} target={item.target} {...props}>
+                                    <a
+                                        href={item.url}
+                                        target={item.target}
+                                        {...props}
+                                    >
                                         <item.icon />
                                         <span>{item.title}</span>
                                     </a>
