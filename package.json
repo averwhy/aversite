@@ -33,6 +33,7 @@
 		"vite": "^7.2.2"
 	},
 	"dependencies": {
+		"lightgallery": "^2.9.0",
 		"mode-watcher": "^1.1.0",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-slug": "^6.0.0"
