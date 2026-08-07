@@ -37,4 +37,7 @@
 <p class="text-sm text-muted-foreground p-10">
     unedited photos taken by me, © avery b 2024-2026.
 </p>
-<LightGallery {images} />
+<LightGallery
+    {images}
+    class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 pb-10 sm:grid-cols-2 lg:grid-cols-3"
+/>

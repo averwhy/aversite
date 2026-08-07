@@ -13,16 +13,9 @@
     let failed = $state(false);
 
     let imgEl = $state<HTMLImageElement | null>(null);
-    let computedWidth = $state<number | undefined>(undefined);
-    let computedHeight = $state<number | undefined>(undefined);
 
     function handleLoad() {
         loaded = true;
-
-        if (!imgEl) return;
-
-        if (width == null) computedWidth = imgEl.naturalWidth || undefined;
-        if (height == null) computedHeight = imgEl.naturalHeight || undefined;
     }
 
     function handleError() {
@@ -30,8 +23,8 @@
     }
 
     const sizeStyle = $derived.by(() =>
-        computedWidth || computedHeight
-            ? `width: ${computedWidth ? computedWidth + "px" : "auto"}; height: ${computedHeight ? computedHeight + "px" : "auto"};`
+        width != null || height != null
+            ? `width: ${width != null ? `${width}px` : "auto"}; height: ${height != null ? `${height}px` : "auto"};`
             : "",
     );
 </script>
@@ -46,8 +39,8 @@
             bind:this={imgEl}
             {src}
             {alt}
-            width={computedWidth}
-            height={computedHeight}
+            width={width ?? undefined}
+            height={height ?? undefined}
             loading="lazy"
             class={`block h-full w-full object-cover transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
             onload={handleLoad}
