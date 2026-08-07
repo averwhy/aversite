@@ -13,7 +13,7 @@
     let galleryContainer: HTMLDivElement | null = null;
     let lgInstance: any = null;
 
-    let { images } = $props();
+    let { images, class: className = "" } = $props();
 
     onMount(() => {
         if (!galleryContainer) return;
@@ -30,7 +30,7 @@
     });
 </script>
 
-<div bind:this={galleryContainer}>
+<div bind:this={galleryContainer} class={className}>
     {#each images as img}
         <LoadableImg src={img.url} alt={img.caption} />
     {/each}
