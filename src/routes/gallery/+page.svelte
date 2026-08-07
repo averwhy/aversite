@@ -34,4 +34,7 @@
     ];
 </script>
 
+<p class="text-sm text-muted-foreground p-10">
+    unedited photos taken by me, © avery b 2024-2026.
+</p>
 <LightGallery {images} />

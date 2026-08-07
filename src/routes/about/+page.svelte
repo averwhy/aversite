@@ -2,8 +2,8 @@
     import LoadableImg from "$lib/components/LoadableImg.svelte";
 </script>
 
-<div class="flex animate-fade items-center justify-center p-1">
-    <div class="flex max-w-6xl flex-col gap-12 p-3 text-white leading-9 lg:p-6">
+<div class="flex items-center justify-center p-1">
+    <div class="flex max-w-6xl flex-col gap-12 p-3 leading-9 lg:p-6">
         <section class="grid gap-8 lg:grid-cols-2 lg:items-center">
             <LoadableImg
                 src="https://cdn.averwhy.net/IMG_2199.JPG"

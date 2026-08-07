@@ -21,7 +21,7 @@
         lgInstance = lightGallery(galleryContainer, {
             plugins: [lgZoom, lgThumbnail],
             speed: 500,
-            licenseKey: "0000-0000-000-0000", // this is stupid. if you are a library developer don't ever EVER do this
+            licenseKey: "1000-0000-000-0002", // this is stupid. if you are a library developer don't ever EVER do this
         });
     });
 

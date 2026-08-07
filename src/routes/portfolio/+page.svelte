@@ -31,11 +31,11 @@
             name: "Penpoint",
             year: "2025-ongoing",
             summary: `Penpoint is an application for rewarding college students for attending
-      events. Built on SvelteKit, students at my school will be able add a wallet pass with a QR code to their phone,
-      and when they attend an event a member of the Student Government will scan their QR code, and they earn points
-      for attending the event!
-      This project is a part of my role as the President of Student Government
-      Organization at my college.`,
+        events. Built on SvelteKit, students at my school will be able add a wallet pass with a QR code to their phone,
+        and when they attend an event a member of the Student Government will scan their QR code, and they earn points
+        for attending the event!
+        This project was a part of my role as the President of Student Government
+        Organization at my college.`,
             stack: ["SvelteKit", "Tailwind", "PostgreSQL"],
             highlight: "Web app",
             links: [
@@ -56,8 +56,8 @@
                     label: "Coming soon...",
                     href: "#",
                     disabled: true,
-                }
-            ]
+                },
+            ],
         },
         {
             name: "packUP",
@@ -113,7 +113,7 @@
             name: "fishy.py",
             year: "2020-2026",
             summary: `Fishy.py is a re-creation and revival of the old Discord bot Fishy, which was a reaction-based fishing game with over 16,000 catchable fish. This was my first major bot project that taught me a lot about Python, SQLite and common coding practices. While not as successful as some of my other projects, it was still a project i throughly enjoyed making, as well as learned a lot through. In May 2026, I decided to sunset the project to focus on newer things.`,
-            stack: ["Python", "Discord API", "Automation"],
+            stack: ["Python", "discord.py", "PostgreSQL"],
             highlight: "Discord bot",
             links: [{ label: "GitHub", href: "https://github.com/averwhy" }],
         },
@@ -184,10 +184,7 @@
 </svelte:head>
 
 <div class="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-8">
-    <div
-        class="pointer-events-none absolute inset-0 -z-10"
-        style="background-image: radial-gradient(circle at top left, rgba(0, 0, 0, 0.06), transparent 30%), radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.05), transparent 22%), linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.025));"
-    ></div>
+    <div class="pointer-events-none absolute inset-0 -z-10"></div>
 
     <div class="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <div class="space-y-4">
@@ -200,24 +197,22 @@
         </div>
 
         <section
-            class="grid gap-6 grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]"
+            class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]"
         >
             {#each projects as project, index}
                 <article
                     class="group relative flex h-full flex-col overflow-hidden border border-border bg-card/70 p-6 transition-transform duration-300 hover:-translate-y-0.5 sm:p-7"
                     style={`--project-accent:${accents[index % accents.length]};`}
                 >
-                    <div
-                        class="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,var(--project-accent),transparent)] opacity-80"
-                    ></div>
-                    <div class="relative z-10 flex flex-1 flex-col gap-6 pt-6">
+                    <div class="absolute inset-x-0 top-0 h-px opacity-80"></div>
+                    <div class="relative z-10 flex flex-1 flex-col gap-6">
                         <div
                             class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs uppercase tracking-[0.3em] text-muted-foreground"
                         >
                             <span>0{index}</span>
-                            <span>•</span>
+                            <span>/</span>
                             <span>{project.year}</span>
-                            <span>•</span>
+                            <span>/</span>
                             <span class="text-foreground"
                                 >{project.highlight}</span
                             >
