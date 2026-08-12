@@ -34,13 +34,17 @@
 <div bind:this={galleryContainer} class={className}>
     {#each images as img}
         <a
-            class="gallery-item block"
+            class="gallery-item block aspect-4/3 overflow-hidden"
             href={img.url}
             data-src={img.url}
             data-sub-html={img.caption}
             aria-label={img.caption || "Open image"}
         >
-            <LoadableImg src={img.url} alt={img.caption} />
+            <LoadableImg
+                src={img.url}
+                alt={img.caption}
+                class="h-full w-full"
+            />
         </a>
     {/each}
 </div>
