@@ -20,6 +20,7 @@
 
         lgInstance = lightGallery(galleryContainer, {
             plugins: [lgZoom, lgThumbnail],
+            selector: ".gallery-item",
             speed: 500,
             licenseKey: "1000-0000-000-0002", // this is stupid. if you are a library developer don't ever EVER do this
         });
@@ -32,6 +33,14 @@
 
 <div bind:this={galleryContainer} class={className}>
     {#each images as img}
-        <LoadableImg src={img.url} alt={img.caption} />
+        <a
+            class="gallery-item block"
+            href={img.url}
+            data-src={img.url}
+            data-sub-html={img.caption}
+            aria-label={img.caption || "Open image"}
+        >
+            <LoadableImg src={img.url} alt={img.caption} />
+        </a>
     {/each}
 </div>
